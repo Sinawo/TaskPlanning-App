@@ -1,0 +1,19 @@
+{
+  "name": "taskplanning-app",
+  "version": "1.0.0",
+  "description": "This as a todo-list application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinawo/TaskPlanning-App.git"
+  },
+  "author": "Sinawo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sinawo/TaskPlanning-App/issues"
+  },
+  "homepage": "https://github.com/Sinawo/TaskPlanning-App#readme"
+}
