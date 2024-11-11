@@ -10,3 +10,7 @@ Nodemon (optional, for development) to automatically restart the server when fil
 
 npm install express
 npm install --save-dev nodemon
+
+Install FullCalendar
+
+npm install @fullcalendar/core @fullcalendar/daygrid @fullcalendar/timegrid
