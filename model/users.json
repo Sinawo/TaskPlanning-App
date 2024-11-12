@@ -1,19 +1,32 @@
-[ 
+{
+  "users": [
     {
-    "1465": {
-        "username": "madfinger11",
-        "email": "maddy@gmail.com",
-        "password": "yddam5342"
+      "userId": 1,
+      "username": "Sinawo",
+      "email": "sinawo@example.com",
+      "passwordHash": "$2b$10$P1FlbGHGBEadYoGE0BTXpeub/uK4Bo2BDU2Q07IwEI/Eu76YSpI8S",
+      "createdAt": "2024-11-12T22:51:56.576Z"
     },
-    "2646": {
-        "username": "yemiakin",
-        "email": "emiakiy@gmail.com",
-        "password": "iy@g65"
+    {
+      "userId": 2,
+      "username": "exampleUser",
+      "email": "user@example.com",
+      "passwordHash": "$2b$10$9FvIq/7psRSbFW/hIZqSEubYpVm9p4.lE5sfN1y.SmWRoRwBa4102",
+      "createdAt": "2024-11-12T22:53:59.067Z"
     },
-    "3253": {
-        "username": "ikechifortune",
-        "email": "echifo@gmail.com",
-        "password": "ifo#mf23"
+    {
+      "userId": 3,
+      "username": "Alice",
+      "email": "Alice@example.com",
+      "passwordHash": "$2b$10$bdfx67Yoz0kdZK1duUPpo.bt0nAFB7.flAhJuXkgeS32DmZZDu2v2",
+      "createdAt": "2024-11-12T22:55:38.856Z"
+    },
+    {
+      "userId": 4,
+      "username": "testuser",
+      "email": "testuser@example.com",
+      "passwordHash": "$2b$10$EeTf41d3jqlVcXe7j71aZuI7QZTHDQAtl7HscMipWv4qc3krjmD0e",
+      "createdAt": "2024-11-12T22:58:16.279Z"
     }
-  }
-]
+  ]
+}

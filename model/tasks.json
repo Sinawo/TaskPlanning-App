@@ -1,1 +1,17 @@
-[]
+{
+    "tasks": [
+      {
+        "taskId": 1,
+        "workspaceId": 1,
+        "title": "Example Task",
+        "description": "This is an example task.",
+        "startDate": "2024-11-12",
+        "dueDate": "2024-11-14",
+        "assignedTo": "exampleUser",
+        "status": "Pending",
+        "createdAt": "2024-11-12T12:00:00Z",
+        "updatedAt": "2024-11-12T12:00:00Z"
+      }
+    ]
+  }
+  
