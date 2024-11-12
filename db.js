@@ -1,3 +1,10 @@
+const ROLE ={
+ ADMIN: 'Admin', 
+ BASIC: 'basic'
+}
+
+
+
 const mysql = require('mysql');
 require('dotenv').config();
 
