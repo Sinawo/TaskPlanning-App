@@ -22,3 +22,43 @@ Content-Type: application/json
   "password": "hashedpassword13"
 }
 
+
+### Add a New Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "workspaceId": 1,
+    "title": "New Task Title",
+    "description": "This is a new task description.",
+    "startDate": "2024-11-12",
+    "dueDate": "2024-11-15",
+    "assignedTo": "testuser"
+}
+
+### Update an Existing Task
+PUT http://localhost:3000/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Updated Task Title",
+    "status": "Completed"
+}
+
+### Delete a Task
+DELETE http://localhost:3000/tasks/6
+
+### Get All Tasks
+GET http://localhost:3000/tasks
+
+### Create
+POST http://localhost:3000/workspaces
+Content-Type: application/json
+
+{
+    "workspaceName": "New Workspace",
+    "description": "This is a new workspace."
+}
+
+### Select
+GET http://localhost:3000/workspaces

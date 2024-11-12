@@ -1,19 +1,40 @@
-[ 
+{
+  "workspaces": [
     {
-    "1465": {
-        "username": "madfinger11",
-        "email": "maddy@gmail.com",
-        "password": "yddam5342"
+      "workspaceId": 1,
+      "workspaceName": "Project Alpha",
+      "description": "This workspace is for Project Alpha.",
+      "createdAt": "2024-11-01T12:00:00Z"
     },
-    "2646": {
-        "username": "yemiakin",
-        "email": "emiakiy@gmail.com",
-        "password": "iy@g65"
+    {
+      "workspaceId": 2,
+      "workspaceName": "Project Beta",
+      "description": "This workspace is for Project Beta, focusing on the beta features.",
+      "createdAt": "2024-11-05T09:30:00Z"
     },
-    "3253": {
-        "username": "ikechifortune",
-        "email": "echifo@gmail.com",
-        "password": "ifo#mf23"
+    {
+      "workspaceId": 3,
+      "workspaceName": "Marketing Campaign",
+      "description": "Workspace for planning the marketing campaign.",
+      "createdAt": "2024-11-10T15:00:00Z"
+    },
+    {
+      "workspaceId": 4,
+      "workspaceName": "Development Sprint",
+      "description": null,
+      "createdAt": "2024-11-12T08:00:00Z"
+    },
+    {
+      "workspaceId": 5,
+      "workspaceName": "Research & Development",
+      "description": "Workspace for R&D activities.",
+      "createdAt": "2024-11-12T12:00:00Z"
+    },
+    {
+      "workspaceId": 6,
+      "workspaceName": "New Workspace",
+      "description": "This is a new workspace.",
+      "createdAt": "2024-11-12T23:37:19.888Z"
     }
-  }
-]
+  ]
+}
