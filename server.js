@@ -101,6 +101,20 @@ app.post('/users/login', async (req, res) => {
     }
 });
 
+
+// GET endpoint to retrieve user details by username
+app.get('/users/:username', (req, res) => {
+    const { username } = req.params;
+
+    // Find the user by username
+    const user = users.find(user => user.username === username);
+    if (!user) {
+        return res.status(404).json({ error: 'User not found.' });
+    }
+
+    res.json(user); // Return the user details as JSON
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
