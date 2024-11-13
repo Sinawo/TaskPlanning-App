@@ -9,54 +9,6 @@
       "assignedTo": "testuser"
     },
     {
-      "taskId": 3,
-      "workspaceId": 1,
-      "title": "New Task Title",
-      "description": "This is a new task description.",
-      "startDate": "2024-11-12",
-      "dueDate": "2024-11-15",
-      "assignedTo": "testuser",
-      "status": "Pending",
-      "createdAt": "2024-11-12T23:23:40.469Z",
-      "updatedAt": "2024-11-12T23:23:40.469Z"
-    },
-    {
-      "taskId": 4,
-      "workspaceId": 1,
-      "title": "New Task Title",
-      "description": "This is a new task description.",
-      "startDate": "2024-11-12",
-      "dueDate": "2024-11-15",
-      "assignedTo": "testuser",
-      "status": "Pending",
-      "createdAt": "2024-11-12T23:24:48.343Z",
-      "updatedAt": "2024-11-12T23:24:48.343Z"
-    },
-    {
-      "taskId": 5,
-      "workspaceId": 1,
-      "title": "New Task Title",
-      "description": "This is a new task description.",
-      "startDate": "2024-11-12",
-      "dueDate": "2024-11-15",
-      "assignedTo": "testuser",
-      "status": "Pending",
-      "createdAt": "2024-11-12T23:24:53.077Z",
-      "updatedAt": "2024-11-12T23:24:53.079Z"
-    },
-    {
-      "taskId": 6,
-      "workspaceId": 1,
-      "title": "New Task Title",
-      "description": "This is a new task description.",
-      "startDate": "2024-11-12",
-      "dueDate": "2024-11-15",
-      "assignedTo": "testuser",
-      "status": "Pending",
-      "createdAt": "2024-11-13T06:48:48.787Z",
-      "updatedAt": "2024-11-13T06:48:48.787Z"
-    },
-    {
       "taskId": 7,
       "workspaceId": 1,
       "title": "Water Title",
