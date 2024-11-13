@@ -32,3 +32,50 @@ Creating tasks: Users can create tasks by providing a title, description, start 
 Viewing tasks: Users can view tasks either by workspace or assigned user.
 Editing tasks: Users can update task details, including changing the status and reassigning tasks.
 Assigning users: The ability to add users to workspaces is essential so they can be assigned tasks.
+
+
+1. Project Structure
+
+your-project/
+│
+├── controllers/         # Controllers for handling business logic
+│   ├── authController.js # Handle authentication logic
+│   ├── taskController.js # Handle tasks related logic
+│   └── ...               # Other controllers
+│
+├── model/               # Database models
+│   ├── User.js          # User model
+│   ├── Task.js          # Task model
+│   └── ...            
+│
+├── node_modules/        # Package dependencies (auto-generated)
+│
+├── public/              # Static files (CSS, JS, Images)
+│   ├── css/
+│   │   └── styles.css    # Main stylesheet
+│   ├── images/
+│   │   └── task-management.svg # Logo or other images
+│   └── js/
+│       ├── auth.js       # Auth related JavaScript (for login/signup)
+│       ├── calendar.js    # JavaScript for calendar view
+│       ├── tasks.js       # JavaScript for task management
+│       └── ...            # Other scripts as needed
+│
+├── routes/              # Route definitions
+│   ├── authRoutes.js    # Authentication routes
+│   ├── taskRoutes.js     # Task related routes
+│   └── ...               # Other routes as needed
+│
+├── views/               # HTML Views
+│   ├── index.html       # Main view (welcome page)
+│   ├── login.html       # Login page
+│   ├── signup.html      # Signup page
+│   ├── dashboard.html    # Main dashboard view
+│   └── ...               # Other views as needed
+│
+├── .env                 # Environment variables
+├── .gitignore           # Git ignore file
+├── package-lock.json    # Package lock file
+├── package.json         # NPM dependencies and scripts
+├── README.md            # Project documentation
+└── server.js            # Main server file

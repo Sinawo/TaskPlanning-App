@@ -1,6 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const tasksController = require('../controllers/tasksController');
+const { loginUser, signupUser } = require('../controllers/authController');
+
+// Login route
+router.post('/login', loginUser);
+
+// Signup route
+router.post('/signup', signupUser);
+
 
 // Define routes for tasks
 router.get('/', tasksController.getAllTasks); // View all tasks

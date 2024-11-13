@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+.slide-image {
+    width: 100%;
+    max-width: 600px; /* Max width for the image */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.text {
+    font-size: 24px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.auth-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue button */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

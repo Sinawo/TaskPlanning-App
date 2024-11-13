@@ -1,15 +1,4 @@
 
-document.querySelector('.login-btn').addEventListener('click', () => {
-  window.location.href = '/login'; // Update this route as needed
-});
-
-document.querySelector('.signup-btn').addEventListener('click', () => {
-  window.location.href = '/signup'; // Update this route as needed
-});
-
-
-
-
 
 function toggleSidePanel() {
   const sidePanel = document.getElementById('sidePanel');
