@@ -6,9 +6,11 @@ const tasksFilePath = path.join(__dirname, '../model/tasks.json');
 // Function to load tasks from the JSON file
 const loadTasks = () => {
     try {
+
         const data = fs.readFileSync(tasksFilePath);
         const parsedData = JSON.parse(data);
         return parsedData.tasks;
+
     } catch (error) {
         console.error('Error loading tasks:', error);
         return []; // Return an empty array in case of error
@@ -85,9 +87,23 @@ const deleteTask = (req, res) => {
 };
 
 // View all tasks
+// Read and return all tasks
+// const getAllTasks = (req, res) => {
+//     fs.readFile(tasksFilePath, 'utf8', (err, data) => {
+//         if (err) {
+//             return res.status(500).json({ error: 'Failed to read tasks file' });
+//         }
+//         const tasks = JSON.parse(data);
+//         res.json(tasks);
+//     });
+// };
+
+
 const getAllTasks = (req, res) => {
+    const tasks = loadTasks();
     res.json(tasks);
 };
+
 
 // Save tasks to the JSON file
 const saveTasksToFile = () => {

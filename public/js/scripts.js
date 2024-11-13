@@ -1,4 +1,14 @@
 
+document.querySelector('.login-btn').addEventListener('click', () => {
+  window.location.href = '/login'; // Update this route as needed
+});
+
+document.querySelector('.signup-btn').addEventListener('click', () => {
+  window.location.href = '/signup'; // Update this route as needed
+});
+
+
+
 
 
 function toggleSidePanel() {
@@ -20,6 +30,7 @@ document.querySelectorAll('.menu-item.header').forEach((header) => {
     subItems.style.display = subItems.style.display === 'none' ? 'block' : 'none';
   });
 });
+
 
 // Function to add a sub-item to a specific list (tasks or categories)
 function addSubItem(listId) {
@@ -43,9 +54,6 @@ function removeSubItem(element) {
 }
 
 
-
-// Show Task List View
-// Function to show Task List View
 // Function to show Task List View
 function showTaskListView() {
   const taskListView = document.getElementById("taskListView");
@@ -53,11 +61,9 @@ function showTaskListView() {
 
   // Remove inline style (if present)
   taskListView.style.display = ""; // Empty string removes inline styles
-
   // Hide calendar view
   calendarView.style.display = "none";
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
   const calendarEl = document.getElementById('calendar')
@@ -65,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initialView: 'dayGridMonth'
   })
   calendar.render()
-})
+});
 
 
 function showCalendarView() {
@@ -74,7 +80,6 @@ function showCalendarView() {
 
   // Remove inline style (if present)
   calendarView.style.display = "";
-
   // Hide task list view
   taskListView.style.display = "none";
 
@@ -95,53 +100,93 @@ function showCalendarView() {
       ]
     });
     calendar.render();
-
     // Add a class to mark that the calendar has been initialized
     calendarView.classList.add("initialized");
   }
-
 }
-
-// Function to filter calendar by view type (day, week, month)
-function filterView(viewType) {
-  const calendarContent = document.getElementById('calendarContent');
-  
-  switch(viewType) {
-    case 'day':
-      calendarContent.innerHTML = '<p>Displaying tasks for today</p>';
-      break;
-    case 'week':
-      calendarContent.innerHTML = '<p>Displaying tasks for this week</p>';
-      break;
-    case 'month':
-      calendarContent.innerHTML = '<p>Displaying tasks for this month</p>';
-      break;
-    default:
-      calendarContent.innerHTML = '';
+document.addEventListener('DOMContentLoaded', () => {
+  const taskList = document.querySelector('.task-list');
+  if (!taskList) {
+      console.error('Task list element not found');
+      return; // Exit early if the task list element doesn't exist
   }
-}
 
+  // Fetch tasks
+  fetch('http://localhost:3000/tasks')
+      .then(response => response.json())
+      .then(data => {
+          console.log('Fetched data:', data);  // Log the data structure to verify
 
+          if (!data || data.length === 0) {
+              taskList.innerHTML = '<li>No tasks available</li>';
+              return;
+          }
 
+          taskList.innerHTML = ''; // Clear existing tasks
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+          data.forEach(task => {  // No need for data.tasks, since the data is an array
+              const taskItem = document.createElement('li');
+              taskItem.innerHTML = `
+                  <span>${task.title} - Due: ${task.dueDate}</span>
+                  <button class="edit-btn" data-id="${task.taskId}">Edit</button>
+                  <button class="delete-btn" data-id="${task.taskId}">Delete</button>
+              `;
+              taskList.appendChild(taskItem);
+          });
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+          // Add event listeners for the buttons
+          document.querySelectorAll('.edit-btn').forEach(button => {
+              button.addEventListener('click', (event) => {
+                  const taskId = event.target.dataset.id;
+                  // Call the update function here
+                  updateTask(taskId);
+              });
+          });
 
+          document.querySelectorAll('.delete-btn').forEach(button => {
+              button.addEventListener('click', (event) => {
+                  const taskId = event.target.dataset.id;
+                  // Call the delete function here
+                  deleteTask(taskId);
+              });
+          });
+      })
+      .catch(error => console.error('Error fetching tasks:', error));
+});
 
+// Function to handle updating a task
+const updateTask = (taskId) => {
+  const updatedData = {
+      title: "Updated Task Title",  // Replace with your form data or prompt
+      description: "Updated task description",
+      dueDate: "2024-11-20",
+      status: "In Progress"
+  };
+
+  fetch(`http://localhost:3000/tasks/${taskId}`, {
+      method: 'PUT',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Task updated:', data);
+      location.reload();  // Reload the page to reflect the changes
+  })
+  .catch(error => console.error('Error updating task:', error));
+};
+
+// Function to handle deleting a task
+const deleteTask = (taskId) => {
+  fetch(`http://localhost:3000/tasks/${taskId}`, {
+      method: 'DELETE',
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Task deleted:', data);
+      location.reload();  // Reload the page to remove the deleted task
+  })
+  .catch(error => console.error('Error deleting task:', error));
+};

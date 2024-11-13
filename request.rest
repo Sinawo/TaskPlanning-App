@@ -1,17 +1,18 @@
 
 
 
+GET http://localhost:3000/tasks HTTP/1.1
+Content-Type: application/json
 
+### Users 
+POST http://localhost:3000/users
+Content-Type: application/json
 
- 
-# POST http://localhost:3000/users
-# Content-Type: application/json
-
-# {
-#   "username": "testuser",
-#   "email": "testuser@example.com",
-#   "password": "hashedpassword123"
-# }
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "hashedpassword123"
+}
 
 POST http://localhost:3000/users/login
 Content-Type: application/json
@@ -29,11 +30,11 @@ Content-Type: application/json
 
 {
     "workspaceId": 1,
-    "title": "New Task Title",
+    "title": "Water Title",
     "description": "This is a new task description.",
-    "startDate": "2024-11-12",
+    "startDate": "2024-11-13",
     "dueDate": "2024-11-15",
-    "assignedTo": "testuser"
+    "assignedTo": "Mdu"
 }
 
 ### Update an Existing Task
@@ -49,7 +50,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/tasks/6
 
 ### Get All Tasks
-GET http://localhost:3000/tasks
+GET http://localhost:3000/tasks/6
 
 ### Create
 POST http://localhost:3000/workspaces

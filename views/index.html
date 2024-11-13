@@ -1,132 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List Application</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="/js/scripts.js"></script>
 
-    <!-- FullCalendar CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List Application</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-<!-- FullCalendar JavaScript -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
-  </head>
+  <!-- FullCalendar CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css" rel="stylesheet">
+  <!-- FullCalendar JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+</head>
 
-  <body>
-    <!-- Header -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="/images/task-management.svg" alt="Task Management Logo" class="logo-image" />
-          <h1 class="logo-text">To<span>Do-P</span>lanner</h1>
-        </div>
-        
-        <input type="text" placeholder="Search tasks..." class="search-bar" />
-
-        <div class="nav-icons">
-          <div class="notification-icon">
-            <i class="fa fa-bell-o" style="font-size: 24px"></i>
-          </div>
-          <div class="account-icon">
-            <i class="fa fa-user-circle-o" style="font-size: 24px"></i>
-          </div>
-          <div class="auth-buttons">
-            <button class="login-btn">Log In</button>
-            <button class="signup-btn">Sign Up</button>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Collapsible Side Panel -->
-    <!-- Collapsible Side Panel -->
-    <div class="side-panel" id="sidePanel">
-         <div class="menu-item">
-            <span class="icon">🏠</span>
-            <span class="menu-text">Dashboard</span>
-          </div>
-     
-       
-         <div class="menu-section">
-            <div class="menu-item header">
-              <span class="icon">📋</span>
-              <span class="menu-text">My Tasks</span>
-              <i class="fa fa-plus add-icon" onclick="addSubItem('tasksList')" title="Add Task"></i>
-            </div>
-   
-            <hr />
-
-            <!-- This is where the nwely added task are going to appear are going to appear -->
-          
-            <div class="sub-items" id="tasksList"></div>
-        </div>
-
-    
-      
+<body>
 
 
-        <div class="menu-section">
-            <div class="menu-item header">
-              <span class="icon">📂</span>
-              <span class="menu-text">Categories</span>
-              <i class="fa fa-plus add-icon" onclick="addSubItem('categoriesList')" title="Add Category"></i>
-            </div>
-   
-         <hr />
-            <div class="sub-items" id="categoriesList"></div>
-          </div>
 
 
-     
 
-      <div class="invite-button">
-        <button>Invite People</button>
+
+
+
+
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/images/task-management.svg" alt="Task Management Logo" class="logo-image" />
+        <h1 class="logo-text">To<span>Do-P</span>lanner</h1>
       </div>
+
+      <input type="text" placeholder="Search tasks..." class="search-bar" />
+
+      <div class="nav-icons">
+        <div class="notification-icon">
+          <i class="fa fa-bell-o" style="font-size: 24px"></i>
+        </div>
+        <div class="account-icon">
+          <i class="fa fa-user-circle-o" style="font-size: 24px"></i>
+        </div>
+        <div class="auth-buttons">
+          <button class="login-btn">Log In</button>
+          <button class="signup-btn">Sign Up</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Collapsible Side Panel -->
+  <div class="side-panel" id="sidePanel">
+    <div class="menu-item">
+      <span class="icon">🏠</span>
+      <span class="menu-text">Dashboard</span>
     </div>
 
-    <!-- Main Content -->
-    <main id="content">
-      <!-- View Toggle Buttons -->
-      <div class="view-toggle-buttons">
-        <div class="dropdown">
-          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#" onclick="filterView('day')">Day</a>
-            <a href="#" onclick="filterView('week')">Week</a>
-            <a href="#" onclick="filterView('month')">Month</a>
-          </div>
-        </div>
-        
-        <button onclick="showTaskListView()">Task List View</button>
-        <button onclick="showCalendarView()">Calendar View</button>
-        
-      </div>
-  
-      <!-- Task List View -->
-      <div id="taskListView" class="view-section">
-        <h2>Tasks Due Soon</h2>
-        <ul class="task-list">
-          <!-- Example task items -->
-          <li>Task 1 - Due: Tomorrow</li>
-          <li>Task 2 - Due: In 2 Days</li>
-          <!-- Additional tasks will be dynamically loaded here -->
-        </ul>
-      </div>
-  
-     <!-- Calendar View -->
-  <div id="calendarView" class="view-section" style="display: none;">
 
-    <div id="calendar"></div> <!-- FullCalendar will render here -->
+    <div class="menu-section">
+      <div class="menu-item header">
+        <span class="icon">📋</span>
+        <span class="menu-text">My Tasks</span>
+        <i class="fa fa-plus add-icon" onclick="addSubItem('tasksList')" title="Add Task"></i>
+      </div>
+      <hr />
+
+      <!-- This is where the nwely added task are going to appear are going to appear -->
+
+      <div class="sub-items" id="tasksList"></div>
+    </div>
+
+
+
+
+
+    <div class="menu-section">
+      <div class="menu-item header">
+        <span class="icon">📂</span>
+        <span class="menu-text">Categories</span>
+        <i class="fa fa-plus add-icon" onclick="addSubItem('categoriesList')" title="Add Category"></i>
+      </div>
+
+      <hr />
+      <div class="sub-items" id="categoriesList"></div>
+    </div>
+
+
+
+
+    <div class="invite-button">
+      <button>Invite People</button>
+    </div>
   </div>
 
-    </main>
-  
-  </body>
-  </html>
+  <!-- Main Content -->
+  <main id="content">
+    <!-- View Toggle Buttons -->
+    <div class="view-toggle-buttons">
+      <button onclick="showTaskListView()">Task List View</button>
+      <button onclick="showCalendarView()">Calendar View</button>
+    </div>
+
+    <!-- Task List View -->
+    <div id="taskListView" class="view-section">
+      <h2>Tasks Due Soon</h2>
+      <ul class="task-list">
+                <!-- Example task items -->
+                <li>Task 1 - Due: Tomorrow</li>
+                <li>Task 2 - Due: In 2 Days</li>
+                <!-- Additional tasks will be dynamically loaded here -->
+            
+
+
+      </ul> <!-- Task list container -->
+
+    </div>
+
+
+    <!-- Calendar View -->
+    <div id="calendarView" class="view-section" style="display: none;">
+      <div id="calendar"></div> <!-- FullCalendar will render here -->
+    </div>
+
+  </main>
+
+  <script src="/js/scripts.js"></script>
+</body>
+
+</html>
