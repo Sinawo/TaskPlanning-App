@@ -1,38 +1,30 @@
-// public/js/auth.js
+document.getElementById('signupForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-document.querySelector('.login-btn').addEventListener('click', () => {
-    window.location.href = '/login'; // Navigate to login page
-  });
-  
-  document.querySelector('.signup-btn').addEventListener('click', () => {
-    window.location.href = '/signup'; // Navigate to signup page
-  });
-  
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    console.log("Auth script loaded");
+    try {
+        const response = await fetch('/api/users/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, email, password })
+        });
 
-
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Perform login (mock example, replace with actual auth logic)
-    window.location.href = '/tasks.html';
+        if (response.ok) {
+            alert('Registration successful!');
+            window.location.href = '/login'; // Redirect to the login page
+        } else {
+            const errorData = await response.json();
+            alert(`Registration failed: ${errorData.error}`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
 });
 
 
-
-
-        var modal = document.getElementById("signupModal");
-        var btn = document.getElementById("signupBtn");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }

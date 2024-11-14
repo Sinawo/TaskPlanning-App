@@ -1,11 +1,26 @@
 
 
-
-GET http://localhost:3000/tasks HTTP/1.1
+POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
+{
+  "username": "John",
+  "password": "hashedpassword13"
+}
+
+
+###
+POST http://localhost:3000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "hashedpassword13"
+}
+
+
 ### Users 
-POST http://localhost:3000/users
+POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 {
@@ -13,14 +28,14 @@ Content-Type: application/json
   "email": "testuser@example.com",
   "password": "hashedpassword123"
 }
-
-POST http://localhost:3000/users/login
+### REgister
+POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 {
-  "username": "testuser",
-  "email": "testuser@example.com",
-  "password": "hashedpassword13"
+  "username": "sinawo",
+  "email": "s@s.com",
+  "password": "sinawo"
 }
 
 

@@ -26,7 +26,7 @@ const taskRoutes = require('./routes/tasks');
 
 
 // Use routes
-app.use('/users', userRoutes);
+app.use('/api/users', userRoutes);
 app.use('/workspaces', workspaceRoutes);
 app.use('/tasks', taskRoutes);
 
@@ -35,6 +35,21 @@ app.use('/tasks', taskRoutes);
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'welcome.html'));
 });
+
+// Route to serve the signup page
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'signup.html'));
+});
+
+// Route to serve the login page if needed
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'login.html'));
+});
+// Route for the dashboard page
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'dashboard.html')); 
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

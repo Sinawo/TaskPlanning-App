@@ -27,6 +27,34 @@
       "email": "testuser@example.com",
       "passwordHash": "$2b$10$EeTf41d3jqlVcXe7j71aZuI7QZTHDQAtl7HscMipWv4qc3krjmD0e",
       "createdAt": "2024-11-12T22:58:16.279Z"
+    },
+    {
+      "userId": 5,
+      "username": "John",
+      "email": "john@example.com",
+      "passwordHash": "$2b$10$LOcX0pIZUw7D8JvLsiLHw.Sg8Gil8mHmeyHCfKEyYnRlusWDw5gC6",
+      "createdAt": "2024-11-13T21:34:47.155Z"
+    },
+    {
+      "userId": 6,
+      "username": "sinawo",
+      "email": "sinawo.com",
+      "passwordHash": "$2b$10$7sa7CIv1NSP9rSPccBp2NOzrUVsh6W7TeVU/MDk7mRksPznngyQbC",
+      "createdAt": "2024-11-13T22:43:29.458Z"
+    },
+    {
+      "userId": 7,
+      "username": "Sinao",
+      "email": "teste@exemplo.us",
+      "passwordHash": "$2b$10$Da4vUne1Ml3NLbjCyGK4pOcXVQX8AC4ZRNUU9MXV.jB5ZAem3J1lK",
+      "createdAt": "2024-11-13T22:56:41.311Z"
+    },
+    {
+      "userId": 8,
+      "username": "Andile",
+      "email": "Blur@gmail.com",
+      "passwordHash": "$2b$10$nO51S0ZL/J2rjidoVpSzCu7pYL9Fq2GjMMcgeWz/fhm4L4950fuaC",
+      "createdAt": "2024-11-13T22:57:46.602Z"
     }
   ]
 }

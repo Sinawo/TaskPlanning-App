@@ -5,9 +5,6 @@ const usersFilePath = path.join(__dirname, '../model/users.json');
 
 const bcrypt = require('bcrypt');
 
-
-
-
 // Function to load users from the JSON file
 const loadUsers = () => {
     try {
@@ -80,30 +77,32 @@ const registerUser = async (req, res) => {
 
 
 
-// User login
 const loginUser = async (req, res) => {
     const { username, password } = req.body;
 
-
     // Find the user by username
     const user = users.find(user => user.username === username);
+
     if (!user) {
-        return res.status(400).send("Cannot find the user");
+        // If user not found, send a response with a link to the signup page
+        return res.status(404).send({ 
+            error: "Cannot find the user. Would you like to sign up?", 
+            redirectToSignup: true // Indicate that the user should be redirected
+        });
     }
 
     try {
-        // Check if the provided password matches the stored hashed password
-        const isMatch = await bcrypt.compare(password, user.passwordHash); // This compares the plain password with the hashed password
-
+        const isMatch = await bcrypt.compare(password, user.passwordHash);
         if (isMatch) {
-            res.send("Login successful!"); // Successful login
+            // Successful login
+            return res.send({ message: "Login successful!" }); // Use an object for consistency
         } else {
-            res.status(500).send("Incorrect password"); // Incorrect password
+            // Incorrect password
+            return res.status(400).send({ error: "Incorrect password" });
         }
-
     } catch (error) {
-        console.error(error);
-        res.status(500).send("Internal Server Error");
+        console.error('Error during login:', error);
+        return res.status(500).send({ error: "Internal Server Error" });
     }
 };
 
