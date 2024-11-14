@@ -22,15 +22,14 @@ let tasks = loadTasks();
 
 // Add a new task
 const addTask = (req, res) => {
-    const { workspaceId, title, description, startDate, dueDate, assignedTo } = req.body;
+    const { title, description, startDate, dueDate, assignedTo, status } = req.body;
 
-    if (!workspaceId || !title || !description || !startDate || !dueDate || !assignedTo) {
+    if (!title || !description || !startDate || !dueDate || !assignedTo) {
         return res.status(400).json({ error: 'All fields are required: workspaceId, title, description, startDate, dueDate, assignedTo.' });
     }
 
     const newTask = {
         taskId: tasks.length + 1,
-        workspaceId,
         title,
         description,
         startDate,
@@ -75,7 +74,7 @@ const updateTask = (req, res) => {
 const deleteTask = (req, res) => {
     const { taskId } = req.params;
     const taskIndex = tasks.findIndex(t => t.taskId == taskId);
-    
+
     if (taskIndex === -1) {
         return res.status(404).json({ error: 'Task not found.' });
     }
@@ -111,10 +110,22 @@ const saveTasksToFile = () => {
     fs.writeFileSync(tasksFilePath, JSON.stringify(dataToSave, null, 2));
 };
 
+const getTaskById = (req, res) => { 
+    const { taskId } = req.params;
+    const task = tasks.find(t => t.taskId === parseInt(taskId)); // Convert taskId to a number
+
+    if (task) {
+        res.json(task); 
+    } else { 
+        res.status(404).send('Task not found'); 
+    }
+};
+
 // Export the task functions
 module.exports = {
     addTask,
     updateTask,
     deleteTask,
-    getAllTasks
+    getAllTasks,
+    getTaskById
 };

@@ -42,6 +42,10 @@
             <img src="/images/image4.jpg" alt="Commercial Task Management" class="slide-image">
             <div class="text">Studying and Exam preparation!</div>
         </div>
+        <div class="mySlides fade">
+            <img src="/images/image5.jpg" alt="Commercial Task Management" class="slide-image">
+            <div class="text">Studying and Exam preparation!</div>
+        </div>
     </div>
 
     <div class="sections">
@@ -94,5 +98,40 @@
 
 
     <script src="/js/welcome.js"></script>
+
+
+
+<div id="taskDetailsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <form id="taskDetailsForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title"><br>
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea><br>
+      
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate"><br>
+      
+      <label for="dueDate">Due Date:</label>
+      <input type="date" id="dueDate" name="dueDate"><br>
+      
+      <label for="assignedTo">Assigned To:</label>
+      <input type="text" id="assignedTo" name="assignedTo"><br>
+      
+      <label for="status">Status:</label>
+      <select id="status" name="status">
+        <option value="Pending">Pending</option>
+        <option value="Completed">Completed</option>
+      </select><br>
+      
+      <button type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+
+
 </body>
 </html>

@@ -1,3 +1,11 @@
+# Get user with username 'john_doe'
+GET http://localhost:3000/api/users/Sinawo
+Accept: application/json
+
+
+
+### Update an Existing Task
+GET http://localhost:3000/tasks/5
 
 
 POST http://localhost:3000/api/users/login
@@ -45,11 +53,11 @@ Content-Type: application/json
 
 {
     "workspaceId": 1,
-    "title": "Water Title",
+    "title": "bEER DAY",
     "description": "This is a new task description.",
-    "startDate": "2024-11-13",
+    "startDate": "2024-11-15",
     "dueDate": "2024-11-15",
-    "assignedTo": "Mdu"
+    "assignedTo": "kAMO"
 }
 
 ### Update an Existing Task
@@ -58,14 +66,14 @@ Content-Type: application/json
 
 {
     "title": "Updated Task Title",
-    "status": "Completed"
+    "status": "Pending"
 }
 
 ### Delete a Task
 DELETE http://localhost:3000/tasks/6
 
 ### Get All Tasks
-GET http://localhost:3000/tasks/6
+GET http://localhost:3000/tasks
 
 ### Create
 POST http://localhost:3000/workspaces
