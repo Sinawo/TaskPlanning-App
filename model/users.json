@@ -55,6 +55,13 @@
       "email": "Blur@gmail.com",
       "passwordHash": "$2b$10$nO51S0ZL/J2rjidoVpSzCu7pYL9Fq2GjMMcgeWz/fhm4L4950fuaC",
       "createdAt": "2024-11-13T22:57:46.602Z"
+    },
+    {
+      "userId": 9,
+      "username": "Nkosinathi",
+      "email": "nkosi@gmail.com",
+      "passwordHash": "$2b$10$XoY8PBO5PldP3TR29XW1DeksSFuAkr1vqpbM2E/ggMm3A9QELk4Te",
+      "createdAt": "2024-11-14T06:47:57.253Z"
     }
   ]
 }

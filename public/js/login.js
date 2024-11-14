@@ -16,12 +16,12 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         if (!response.ok) {
             if (result.redirectToSignup) {
                 // Redirect to the signup page if the user is not found
-                window.location.href = '/signup.html'; // Adjust the path to your signup page
+                alert('Account does not exist !');
+                window.location.href = '/register'; // Adjust the path to your signup page
             } else {
                 document.getElementById('error').textContent = result.error || 'An error occurred. Please try again.';
                 alert(`Login failed: ${result.error}`); // Show alert with error message
             }
-        } else {
             alert('Login successful!');
             window.location.href = '/dashboard'; // Redirect to the dashboard on success
         }
@@ -29,4 +29,11 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         document.getElementById('error').textContent = 'An error occurred. Please try again.';
         console.error('Error during login:', error);
     }
+});
+
+
+const wrapper = document.querySelector(".wrapper"),
+loginHeader = document.querySelector(".login header");
+loginHeader.addEventListener("click", () => {
+wrapper.classList.add("active");
 });
