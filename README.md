@@ -1,5 +1,5 @@
 # TaskPlanning-App
-[View live Todo list](https://deploy-preview-1--luminous-wisp-719e39.netlify.app/)
+[View live Todo list]((https://gamy-sharp-durian.glitch.me/)
 TaskPlanning-App is a comprehensive task management application designed to help users organize and manage their to-do lists with ease. This application offers CRUD operations for tasks, integration with FullCalendar, and various views for effective task tracking. 
 
 ## Features
