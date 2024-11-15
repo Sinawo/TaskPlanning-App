@@ -62,6 +62,13 @@
       "email": "nkosi@gmail.com",
       "passwordHash": "$2b$10$XoY8PBO5PldP3TR29XW1DeksSFuAkr1vqpbM2E/ggMm3A9QELk4Te",
       "createdAt": "2024-11-14T06:47:57.253Z"
+    },
+    {
+      "userId": 10,
+      "username": "Zuma",
+      "email": "zuma@gmail.com",
+      "passwordHash": "$2b$10$dPMPDFCdmWB9VZa4PiF4v.ouJchKt4hxZv8aPm/18mmTelGPyQBDC",
+      "createdAt": "2024-11-14T20:44:55.615Z"
     }
   ]
 }

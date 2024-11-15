@@ -20,12 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             data.forEach(task => {
                 const taskItem = document.createElement('li');
+
+                // Create the inner HTML structure for the task item
                 taskItem.innerHTML = `
-                    <span>${task.title} - Due: ${task.dueDate}</span>
-                    <button class="edit-btn" data-id="${task.taskId}">Edit</button>
-                    <button class="delete-btn" data-id="${task.taskId}">Delete</button>
-                    <button class="view-btn" data-id="${task.taskId}">View Details</button>
+                    <span class="task-title">${task.title}</span> 
+                  
+                    <div class="button-container">
+                        <button class="edit-btn" data-id="${task.taskId}">Edit</button>
+                        <button class="delete-btn" data-id="${task.taskId}">Delete</button>
+                        <button class="view-btn" data-id="${task.taskId}">View Details</button>
+                    </div>
                 `;
+
                 taskList.appendChild(taskItem);
             });
 

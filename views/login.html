@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Log In</title>
-        <link rel="stylesheet" href="/css/login.css" />
+        <link rel="stylesheet" href="/css/auth.css" />
         <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -16,11 +16,10 @@
                 <div class="form signup">
                         <header>Login</header>
                         <form id="loginForm" method="POST" action="/api/users/login">
-                                <input type="text" id="username" name="username" placeholder="Username" required />
-                                <input type="password" id="password" name="password"  placeholder="Password" required />
-                                <div id="error" style="color: red;"></div>
+                            <input type="text" id="loginUsername" name="username" placeholder="Username" required />
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required />
+                                <div id="error"  style="color: #FFD700;"></div>
                                 <input type="submit" value="Login" />
-
                         </form>
                 </div>
 
@@ -36,10 +35,7 @@
                                 <input type="password" id="password" name="password" placeholder="Password" required />
                                 <p>Already have an account? <a href="/login">Login here</a>.</p>
                                 
-                                <!-- <div class="checkbox">
-                                    <input type="checkbox" id="signupCheck" />
-                                    <label for="signupCheck">I accept all terms & conditions</label>
-                                </div> -->
+
                                 <input type="submit" value="Signup">
                                 
                             </form>
@@ -50,7 +46,7 @@
         </section>
 
         <!-- Redirect to main task page after successful login -->
-        <script src="/js/login.js"></script>
+        <script src="/js/auth.js"></script>
 
 </body>
 

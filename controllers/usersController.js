@@ -79,7 +79,7 @@ const registerUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
     const { username, password } = req.body;
-
+   
     // Find the user by username
     const user = users.find(user => user.username === username);
 
@@ -98,7 +98,7 @@ const loginUser = async (req, res) => {
             return res.send({ message: "Login successful!" }); // Use an object for consistency
         } else {
             // Incorrect password
-            return res.status(400).send({ error: "Incorrect password" });
+            return res.status(400).send({ error: "Incorrect password or username" });
         }
     } catch (error) {
         console.error('Error during login:', error);

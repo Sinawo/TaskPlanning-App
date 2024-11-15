@@ -5,11 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do List Application</title>
+
+  
+  <link rel="stylesheet" href="/css/calendar.css" />
+  <link rel="stylesheet" href="/css/form-edits.css" />
+  <link rel="stylesheet" href="/css/modal.css" />
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="stylesheet" href="/css/tasks.css" />
-  <link rel="stylesheet" href="/css/edit_task.css" />
 
-
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- FullCalendar CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css" rel="stylesheet">
@@ -54,9 +58,9 @@
 
     <div class="menu-section">
       <div class="menu-item header">
-        <span class="icon">📋</span>
-        <span class="menu-text">Create Tasks</span>
-        <i class="fa fa-plus add-icon" title="Add Task"></i>
+       
+  
+        <i class="fa fa-plus add-icon" title="Add Task"> 📋  <span class="icon"></span> Create Tasks</i>
       </div>
       <hr />
 
@@ -92,9 +96,14 @@
   <main id="content">
     <!-- View Toggle Buttons -->
     <div class="view-toggle-buttons">
-      <button onclick="showTaskListView()">Task List View</button>
-      <button onclick="showCalendarView()">Calendar View</button>
-    </div>
+      <button onclick="showTaskListView()">
+        📋 List View
+      </button>
+      <button onclick="showCalendarView()">
+        📅 Calendar View
+      </button>
+  </div>
+  
 
     <!-- Task List View -->
     <div id="taskListView" class="view-section">
