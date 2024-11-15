@@ -1,0 +1,301 @@
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common Font Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Side Panel */
+.side-panel {
+  width: 80px;
+  background-color: #f9f9f9;
+  color: black;
+  position: fixed;
+  top: 60px; /* Start under the navbar */
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+}
+
+.side-panel:hover {
+  width: 250px;
+}
+
+
+/* Buttons */
+.auth-buttons button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #3d5166;
+  color: white;
+}
+
+.signup-btn {
+  background-color: #f1f1f1;
+  color: #0073e6;
+  border: 1px solid #0073e6;
+}
+
+/* Nav Icons */
+.nav-icons {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+
+.side-panel:hover .menu-text {
+display: inline;
+font-size: 16px;
+}
+
+.invite-button {
+position: absolute;
+bottom: 20px;
+width: 100%;
+text-align: center;
+}
+
+.invite-button button {
+padding: 10px;
+border: none;
+background-color: #3d5166;
+color: white;
+cursor: pointer;
+width: 90%;
+margin: 0 auto;
+display: block;
+border-radius: 5px;
+}
+
+.invite-button button:hover {
+background-color: #7c858d;
+}
+
+
+/* Add icon next to headers */
+.add-icon {
+margin-left: auto;
+cursor: pointer;
+color: #0073e6;
+}
+
+.menu-item {
+display: flex;
+align-items: center;
+padding: 10px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+
+.menu-item:hover {
+background-color: #e0e0e0;
+}
+
+.icon {
+font-size: 20px;
+margin-right: 10px;
+}
+
+.menu-text {
+display: none;
+}
+
+/* Search Bar */
+.search-bar {
+flex: 1;
+max-width: 400px;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin: 0 20px;
+}
+
+.menu-section .header {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+/* views calendar | List view styles  */
+#content{
+margin-top: 67px;
+
+}
+.view-toggle-buttons {
+display: flex;
+justify-content: center;
+max-width: 100%;
+
+
+display: flex;
+align-items: center;
+
+border: 1px solid #ccc;
+border-radius: 15px;
+padding: 20px;
+
+
+text-align: center;
+
+}
+
+.view-toggle-buttons button {
+padding: 20px;
+display: flex;
+flex-direction: column;
+
+margin: 0 5px;
+background-color: white;
+color: grey;
+border: 2px solid #0073e6;
+border-radius: 12px;
+cursor: pointer;
+}
+
+.view-toggle-buttons button:hover {
+background-color: #9fb7cf;
+transform: scale(1.05); 
+}
+
+.view-section {
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+/*  End of list view */
+
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 20px;
+background-color: #ffffff;
+border-bottom: 1px solid #ddd;
+height: 60px;
+width: 100%;
+position: fixed;
+top: 0;
+z-index: 1000;
+}
+
+/* Logo */
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.logo-image {
+width: 30px;
+height: auto;
+
+
+text-shadow: 0 0 25px lightblue, 0 0 50px lightblue; 
+transform: scale(1.1);
+transition: transform 0.3s ease; 
+
+}
+
+.logo-text {
+font-size: 1.5em;
+color: #3d5166;
+font-weight: bold;
+}
+.logo-text:hover {
+color: lightblue;
+box-shadow: 0 0 25px rgb(2, 50, 105);
+text-shadow: 0 0 25px lightblue, 0 0 50px lightblue; 
+transform: scale(1.1);
+transition: transform 0.3s ease; 
+border: 3px solid lightblue;
+}
+span{
+color: rgb(4, 83, 173);;
+}
+
+
+
+
+
+
+
+
+
+/* Sub-items styling */
+.sub-items {
+display: none;
+padding-left: 30px;
+}
+
+
+
+.sub-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 0;
+}
+
+.sub-item:hover {
+background-color: #e0e0e0;
+border-radius: 5px;
+}
+
+.sub-item i {
+cursor: pointer;
+color: #333;
+}
+
+
+
+
+
+
+
+
+

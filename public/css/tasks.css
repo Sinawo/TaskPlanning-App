@@ -1,0 +1,141 @@
+/* Style the task list container */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+/* Style each task item as a container */
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  margin: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+}
+
+
+.task-title {
+  flex: 1;                       /* Allow the title to grow and fill space */
+  margin-right: 20px;           /* Add margin to the right to separate from buttons */
+  overflow: hidden;              /* Hide overflow text */
+  white-space: nowrap;           /* Prevent text wrapping */
+  text-overflow: ellipsis;       /* Show ellipsis for overflowed text */
+}
+
+/* Add a subtle hover effect */
+.task-list li:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Style the task title and due date */
+.task-list li span {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Button container to align buttons to the far right */
+.task-list li .button-group {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* Style the buttons */
+.task-list .edit-btn,
+.task-list .delete-btn,
+.task-list .view-btn {
+  background-color: #ffffff;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9em;
+}
+
+/* Add different colors to each button */
+.task-list .edit-btn {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.task-list .delete-btn {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.task-list .view-btn {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+/* Button hover effects */
+.task-list .edit-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.task-list .delete-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.task-list .view-btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task-list li {
+      flex-direction: column;
+     
+  }
+  .nav-icons {
+    gap: 5px;
+  }
+
+  .side-panel {
+    width: 60px; /* Narrower side panel on smaller screens */
+  }
+
+  .task-list .button-group {
+      margin-top: 10px;
+      width: 100%;
+      justify-content: flex-start;
+  }
+
+  .side-panel:hover {
+    width: 180px; /* Hover width adjustment */
+  }
+
+  .task-list .edit-btn,
+  .task-list .delete-btn,
+  .task-list .view-btn {
+      margin-top: 5px;
+      width: 100%;
+  }
+}
+
+.button-container {
+    display: flex;                 /* Align buttons horizontally */
+    gap: 5px;                     /* Space between buttons */
+}
+
+
+    /* Optional: Add button styles */
+  
+  
+
+

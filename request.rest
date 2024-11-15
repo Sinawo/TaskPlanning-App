@@ -1,0 +1,89 @@
+# Get user with username 'john_doe'
+GET http://localhost:3000/api/users/Sinawo
+Accept: application/json
+
+
+
+### Update an Existing Task
+GET http://localhost:3000/tasks/5
+
+
+### Update an Existing Task
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "John",
+  "password": "hashedpassword13"
+}
+
+
+###
+POST http://localhost:3000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "hashedpassword13"
+}
+
+
+### Users 
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "hashedpassword123"
+}
+### REgister
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "sinawo",
+  "email": "s@s.com",
+  "password": "sinawo"
+}
+
+
+### Add a New Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+    "workspaceId": 1,
+    "title": "bEER DAY",
+    "description": "This is a new task description.",
+    "startDate": "2024-11-15",
+    "dueDate": "2024-11-15",
+    "assignedTo": "kAMO"
+}
+
+### Update an Existing Task
+PUT http://localhost:3000/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Updated Task Title",
+    "status": "Pending"
+}
+
+### Delete a Task
+DELETE http://localhost:3000/tasks/6
+
+### Get All Tasks
+GET http://localhost:3000/tasks
+
+### Create
+POST http://localhost:3000/workspaces
+Content-Type: application/json
+
+{
+    "workspaceName": "New Workspace",
+    "description": "This is a new workspace."
+}
+
+### Select
+GET http://localhost:3000/workspaces

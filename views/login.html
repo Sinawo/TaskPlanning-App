@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In</title>
+        <link rel="stylesheet" href="/css/auth.css" />
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+        <section class="wrapper">
+                <div class="form signup">
+                        <header>Login</header>
+                        <form id="loginForm" method="POST" action="/api/users/login">
+                            <input type="text" id="loginUsername" name="username" placeholder="Username" required />
+                            <input type="password" id="loginPassword" name="password" placeholder="Password" required />
+                                <div id="error"  style="color: #FFD700;"></div>
+                                <input type="submit" value="Login" />
+                        </form>
+                </div>
+
+                <div class="form login">
+                        <header>Signup</header>
+                        <form id="signupForm" method="POST" action="/api/users/register">
+                                <!-- <h2 style="color: #0056b3;">Create Your Account</h2> Blue header -->
+                
+                                <input type="text" id="username" name="Username"  placeholder="Username" required />
+                
+                                <input type="email" id="email" placeholder="Email address" required />
+                
+                                <input type="password" id="password" name="password" placeholder="Password" required />
+                                <p>Already have an account? <a href="/login">Login here</a>.</p>
+                                
+
+                                <input type="submit" value="Signup">
+                                
+                            </form>
+                    </div>
+
+
+
+        </section>
+
+        <!-- Redirect to main task page after successful login -->
+        <script src="/js/auth.js"></script>
+
+</body>
+
+</html>
