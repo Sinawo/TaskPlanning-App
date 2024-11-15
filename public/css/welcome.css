@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF; /* White background */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark gray text */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #007BFF; /* Bright blue background */
+    color: white; /* White text */
+    text-align: center;
+}
+
+.header .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.auth-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.auth-buttons button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #007BFF; /* Bright blue button */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    color:  white;
+    box-shadow: 0 0 25px  #0056b3;
+    text-shadow: 0 0 25px  #0056b3;
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+    border: 3px solid  #0056b3;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #333333; /* Dark gray text for slides */
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-image {
+    width: 100%;
+    max-height: 35%; /* Adjust as necessary */
+    max-width: 600px; /* Max width for the image */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.text {
+    font-size: 24px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sections .feature {
+    background-color: #F8F9FA; /* Light gray background for features */
+    border: 1px solid #E0E0E0; /* Light gray border */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sections .feature h2 {
+    color: #007BFF; /* Bright blue text for headings */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sections .feature {
+        width: calc(50% - 40px); /* 2 items per row */
+    }
+
+    .auth-buttons button {
+        font-size: 16px;
+        padding: 10px 20px; /* Smaller buttons */
+    }
+
+    .text {
+        font-size: 20px; /* Smaller text in slideshow */
+    }
+}
+
+@media (max-width: 480px) {
+    .sections .feature {
+        width: calc(100% - 40px); /* 1 item per row */
+    }
+
+    .auth-buttons button {
+        font-size: 14px; /* Even smaller buttons */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .text {
+        font-size: 18px; /* Smaller text */
+    }
+
+    .header h1 {
+        font-size: 28px; /* Responsive heading size */
+    }
+
+    .header p {
+        font-size: 16px; /* Responsive paragraph size */
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF; /* Bright blue background for footer */
+    color: white; /* White text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer .social-media {
+    margin: 20px 0;
+}
+
+.footer .social-media a {
+    text-decoration: none;
+    color: white; /* White icons */
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #333; /* Dark gray for social media buttons */
+}
+
+.footer .social-media a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

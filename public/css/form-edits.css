@@ -1,0 +1,104 @@
+
+  
+  /* Form styling */
+  #taskDetailsForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #taskDetailsForm label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #taskDetailsForm input,
+  #taskDetailsForm textarea,
+  #taskDetailsForm select,
+  #taskDetailsForm button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #taskDetailsForm textarea {
+    resize: vertical; /* Allow vertical resize only */
+  }
+  
+  #taskDetailsForm button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #taskDetailsForm button:hover {
+    background-color: #005A9E;
+  }
+  
+
+/* Form styling */
+#taskDetailsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#taskDetailsForm label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#taskDetailsForm input,
+#taskDetailsForm textarea,
+#taskDetailsForm select,
+#taskDetailsForm button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#taskDetailsForm textarea {
+  resize: vertical; /* Allow vertical resize only */
+}
+
+#taskDetailsForm button {
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#taskDetailsForm button:hover {
+  background-color: #005A9E;
+}
+
+/* Confirmation modal buttons */
+#deleteConfirmationModal .modal-content p {
+  margin: 20px 0;
+}
+
+#confirmDeleteBtn, #cancelDeleteBtn {
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#confirmDeleteBtn:hover {
+  background-color: #d9534f; /* Red color for delete confirmation */
+}
+
+#cancelDeleteBtn:hover {
+  background-color: #5bc0de; /* Blue color for cancel */
+}
