@@ -80,9 +80,12 @@ async function updateTask(taskId) {
         // Display the modal
         modal.style.display = "block";
 
+        // Remove existing event listeners
+        form.replaceWith(form.cloneNode(true));
+        const newForm = document.getElementById('taskDetailsForm');
+
         // Attach the submit event handler to the form
-        const form = document.getElementById('taskDetailsForm');
-        form.onsubmit = async function (event) {
+        newForm.addEventListener('submit', async function (event) {
             event.preventDefault(); // Prevent the default form submission
 
             const updatedTask = {
