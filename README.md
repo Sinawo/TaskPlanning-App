@@ -1,5 +1,5 @@
 # TaskPlanning-App
-[View live Todo list]((https://gamy-sharp-durian.glitch.me/)
+[View live Todo list]((https://gamy-sharp-durian.glitch.me/) or video: https://www.loom.com/share/06f4bec0489047fca7e92be3b8880f02?sid=184627dc-cf9d-4526-8e2d-a35d723d7ecf
 TaskPlanning-App is a comprehensive task management application designed to help users organize and manage their to-do lists with ease. This application offers CRUD operations for tasks, integration with FullCalendar, and various views for effective task tracking. 
 
 ## Features
